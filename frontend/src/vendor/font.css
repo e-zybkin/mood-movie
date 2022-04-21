@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./Raleway/ralewayregular.woff2") format("woff2"),
+       url("./Raleway/ralewayregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./Raleway/ralewaymedium.woff2") format("woff2"),
+       url("./Raleway/ralewaymedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("./Raleway/ralewayblack.woff2") format("woff2"),
+       url("./Raleway/ralewayblack.woff") format("woff");
+}
