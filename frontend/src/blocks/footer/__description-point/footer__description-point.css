@@ -1,0 +1,7 @@
+.footer__description-point {
+  margin: 0;
+}
+
+.footer__description-point:not(:last-child) {
+  margin-bottom: 18px;
+}

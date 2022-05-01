@@ -1,14 +1,15 @@
 import React from "react";
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
+import Main from '../Main/Main';
+import Skyscraper from '../Skyscraper/Skyscraper';
+import Forest from '../Forest/Forest';
+import Desert from '../Desert/Desert';
 
 function App() {
 
   return (
     <div className="page">
       <div className="wrapper">
-        <Header
-
-        />
         <Routes>
           <Route
             path="/"
@@ -21,7 +22,7 @@ function App() {
           <Route
             path="/romantic"
             element={
-              <CinemaSkyScraper
+              <Skyscraper
 
               />
             }
@@ -29,7 +30,7 @@ function App() {
           <Route
             path="/horror"
             element={
-              <CinemaForest
+              <Forest
 
               />
             }
@@ -37,7 +38,7 @@ function App() {
           <Route
             path="/retro"
             element={
-              <CinemaDesert
+              <Desert
 
               />
             }
