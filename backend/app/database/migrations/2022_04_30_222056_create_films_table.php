@@ -13,14 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('films', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cinema_id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('short_desc');
+            $table->text('full_desc');
+            $table->string('poster')->nullable();
+            $table->string('trailer');
+            $table->string('kinopoisk_link');
             $table->timestamps();
+
+            $table->foreign('cinema_id', 'films_cinema_fk')->on('cinemas')->references('id');
+
+            $table->softDeletes();
         });
     }
 
@@ -31,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('films');
     }
 };
