@@ -1,0 +1,5 @@
+.feedback__form-part {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}

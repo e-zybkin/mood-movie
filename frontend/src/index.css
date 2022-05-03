@@ -2,6 +2,33 @@
 @import url(./vendor/font.css);
 @import url(./blocks/page/page.css);
 @import url(./blocks/wrapper/wrapper.css);
+@import url(./blocks/buttons/buttons.css);
+@import url(./blocks/main-header/main-header.css);
+@import url(./blocks/main-header/__nav/main-header__nav.css);
+@import url(./blocks/main-header/__link/main-header__link.css);
+@import url(./blocks/main-header/__title/main-header__title.css);
+
+@import url(./blocks/present/present.css);
+@import url(./blocks/present/__box/present__box.css);
+@import url(./blocks/present/__title/present__title.css);
+@import url(./blocks/present/__text/present__text.css);
+
+@import url(./blocks/bar/bar.css);
+@import url(./blocks/bar/__box/bar__box.css);
+@import url(./blocks/bar/__title/bar__title.css);
+@import url(./blocks/bar/__text/bar__text.css);
+@import url(./blocks/bar/__button/bar__button.css);
+@import url(./blocks/bar/__pic/bar__pic.css);
+@import url(./blocks/feedback/feedback.css);
+@import url(./blocks/feedback/__box/feedback__box.css);
+@import url(./blocks/feedback/__title/feedback__title.css);
+@import url(./blocks/feedback/__text/feedback__text.css);
+@import url(./blocks/form/form.css);
+@import url(./blocks/input-box/input-box.css);
+@import url(./blocks/feedback/__form-part/feedback__form-part.css);
+@import url(./blocks/form/__input/form__input.css);
+@import url(./blocks/form/__input-error/form__input-error.css);
+@import url(./blocks/form/__save-btn/form__save-btn.css);
 
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__menu/footer__menu.css);
@@ -13,33 +40,5 @@
 @import url(./blocks/footer/__description-point/footer__description-point.css);
 @import url(./blocks/footer/__timetable/footer__timetable.css);
 @import url(./blocks/footer/__time-point/footer__time-point.css);
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
-@import url();
+
 

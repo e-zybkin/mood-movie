@@ -1,0 +1,8 @@
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box:nth-of-type(2n) {
+  margin-bottom: 48px;
+}

@@ -1,0 +1,11 @@
+.main-header {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 430px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+}
