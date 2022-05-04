@@ -11,6 +11,14 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/debug" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/maximebf/debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/barryvdh/laravel-debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/myclabs/php-enum" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/intervention/image" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/spatie/image" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/spatie/temporary-directory" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/spatie/laravel-medialibrary" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/spatie/image-optimizer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/maennchen/zipstream-php" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/glide" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

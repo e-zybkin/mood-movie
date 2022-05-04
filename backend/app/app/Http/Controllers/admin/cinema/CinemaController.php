@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin\cinema;
 use App\Http\Controllers\BaseController;
 use App\Http\Requests\Cinema\StoreCinemaRequest;
 use App\Http\Requests\Cinema\UpdateCinemaRequest;
+use App\Http\Requests\CinemaPosterRequest;
 use App\Models\Cinema;
 
 class CinemaController extends BaseController
@@ -21,12 +22,13 @@ class CinemaController extends BaseController
         return view('admin.cinemas.create');
     }
 
-    #[NoReturn] public function store(StoreCinemaRequest $request)
+    #[NoReturn] public function store(StoreCinemaRequest $request, CinemaPosterRequest $reqPoster)
     {
-
         $data = $request->validated();
 
-        $this->service->store($data);
+        $poster = $reqPoster->validated();
+
+        $this->service->store($data, $poster['poster']);
 
         return redirect()->route('cinema.index');
     }

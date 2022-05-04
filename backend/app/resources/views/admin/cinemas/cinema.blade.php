@@ -14,6 +14,7 @@
         </thead>
         <tbody>
 
+        @php /** @var \App\Models\Cinema $cinema */ @endphp
 
         @foreach($cinemas as $key => $cinema)
             <tr>
@@ -21,7 +22,8 @@
                 <td class="col-2">{{$cinema->name}}</td>
                 <td class="col-3">{{$cinema->short_desc}}</td>
                 <td class="col-3">{{$cinema->full_desc}}</td>
-                <td class="col-2">{{-- {{$cinema->poster}}--}}</td>
+                <td class="col-2"><img src="{{$cinema->getMedia('main')->first()->getFullUrl('thumb')}}" alt="Пэнсил">
+                </td>
                 <td class="col-1">
                     <form action="{{route('cinema.edit', $cinema->id)}}" method="post">
                         @csrf
@@ -41,9 +43,9 @@
 
         </tbody>
     </table>
-{{--    <div class="mt-3">--}}
-{{--        {{$cinemas->withQueryString()->links()}}--}}
-{{--    </div>--}}
+    {{--    <div class="mt-3">--}}
+    {{--        {{$cinemas->withQueryString()->links()}}--}}
+    {{--    </div>--}}
     <div><a href="{{route('cinema.create')}}"><input class="btn btn-primary" type="button" value="Input"></a></div>
     <div><a href="{{route('cinema.trash.index')}}">
             <button style="float: right;" type="submit" class="btn btn-danger"><i

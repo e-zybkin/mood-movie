@@ -114,6 +114,14 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/app/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/app/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/app/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/app/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/app/vendor/spatie/image" />
+      <path value="$PROJECT_DIR$/app/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/app/vendor/spatie/laravel-medialibrary" />
+      <path value="$PROJECT_DIR$/app/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/app/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/app/vendor/league/glide" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />

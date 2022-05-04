@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Http\Requests\Cinema\UpdateCinemaRequest;
 use App\Models\Cinema;
+use Illuminate\Http\UploadedFile;
 
 class CinemaService
 {
@@ -13,9 +14,13 @@ class CinemaService
         return $cinemas;
     }
 
-    public function store($data)
+    public function store($data, UploadedFile $poster)
     {
-        $post = Cinema::create($data);
+        $cinema = Cinema::make($data);
+        if (!empty($poster)) {
+            $cinema->addMedia($poster)->toMediaCollection('main');
+        }
+        $cinema->save();
     }
 
     public function update(Cinema $cinema, $data)
