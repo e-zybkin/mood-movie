@@ -8,6 +8,9 @@
       <sourceFolder url="file://$MODULE_DIR$/app/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/maximebf/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/barryvdh/laravel-debugbar" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers\admin\cinema;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\BaseController;
+use App\Http\Requests\Cinema\StoreCinemaRequest;
+use App\Http\Requests\Cinema\UpdateCinemaRequest;
 use App\Models\Cinema;
-use Illuminate\Http\Request;
 
-class CinemaController extends Controller
+class CinemaController extends BaseController
 {
     public function index()
     {
         $cinemas = Cinema::all();
-        return view('admin.cinemas.cinema',['cinemas'=>$cinemas]);
+        return view('admin.cinemas.cinema', ['cinemas' => $cinemas]);
     }
 
     public function create()
@@ -19,14 +20,14 @@ class CinemaController extends Controller
         return view('admin.cinemas.create');
     }
 
-    #[NoReturn] public function store(StoreRequest $request)
+    #[NoReturn] public function store(StoreCinemaRequest $request)
     {
 
         $data = $request->validated();
+        $path = $request->file('poster')->store('cinemas_img', 'public');
+        $this->service->store($data, $path);
 
-        $this->service->store($data);
-
-        return redirect()->route('posts.index');
+        return redirect()->route('cinema.index');
     }
 
     public function show(Cinema $cinema)
@@ -34,26 +35,37 @@ class CinemaController extends Controller
         return view('admin.cinemas.show', ['cinema' => $cinema]);
     }
 
-    public function edit(Post $post)
+    public function edit(Cinema $cinema)
     {
-        $categories = Category::all();
-        $tags = Tag::all();
-        return view('admin.posts.edit', ['post' => $post, 'categories' => $categories, 'tags' => $tags]);
+        return view('admin.cinemas.edit', ['cinema' => $cinema]);
     }
 
-    public function update(UpdateRequest $request, Post $post)
+    public function update(UpdateCinemaRequest $request, Cinema $cinema)
     {
         $data = $request->validated();
+        $path = $request->file('poster')->store('cinemas_img', 'public');
 
-        $this->service->update($post, $data);
+        $this->service->update($cinema, $data, $path);
 
-        return redirect()->route('posts.show', ['post' => $post]);
+        return redirect()->route('cinema.show', ['cinema' => $cinema]);
     }
 
     public function destroy($id)
     {
         $this->service->destroy($id);
-        return redirect()->route('posts.index');
+        return redirect()->route('cinema.index');
+    }
+
+    public function trash()
+    {
+        $trash_cinemas = $this->service->trash();
+        return view('admin.cinemas.cinema_trash', ['cinemas' => $trash_cinemas]);
+    }
+
+    public function restore($id)
+    {
+        $this->service->restore($id);
+        return redirect()->route('cinema.index');
     }
 
 }
