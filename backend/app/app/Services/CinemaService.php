@@ -7,15 +7,19 @@ use App\Models\Cinema;
 
 class CinemaService
 {
-    public function store($data, $path)
+    public function index()
     {
-        $data['poster'] = $path;
+        $cinemas = Cinema::all();
+        return $cinemas;
+    }
+
+    public function store($data)
+    {
         $post = Cinema::create($data);
     }
 
-    public function update(Cinema $cinema, $data,$path)
+    public function update(Cinema $cinema, $data)
     {
-        $data['poster'] = $path;
         $cinema->update($data);
     }
 

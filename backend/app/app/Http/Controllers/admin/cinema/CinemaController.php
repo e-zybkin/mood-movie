@@ -11,7 +11,8 @@ class CinemaController extends BaseController
 {
     public function index()
     {
-        $cinemas = Cinema::all();
+        $cinemas = $this->service->index();
+
         return view('admin.cinemas.cinema', ['cinemas' => $cinemas]);
     }
 
@@ -24,8 +25,8 @@ class CinemaController extends BaseController
     {
 
         $data = $request->validated();
-        $path = $request->file('poster')->store('cinemas_img', 'public');
-        $this->service->store($data, $path);
+
+        $this->service->store($data);
 
         return redirect()->route('cinema.index');
     }
@@ -43,9 +44,8 @@ class CinemaController extends BaseController
     public function update(UpdateCinemaRequest $request, Cinema $cinema)
     {
         $data = $request->validated();
-        $path = $request->file('poster')->store('cinemas_img', 'public');
 
-        $this->service->update($cinema, $data, $path);
+        $this->service->update($cinema, $data);
 
         return redirect()->route('cinema.show', ['cinema' => $cinema]);
     }

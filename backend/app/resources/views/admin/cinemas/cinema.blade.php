@@ -21,7 +21,7 @@
                 <td class="col-2">{{$cinema->name}}</td>
                 <td class="col-3">{{$cinema->short_desc}}</td>
                 <td class="col-3">{{$cinema->full_desc}}</td>
-                <td class="col-2">{{$cinema->poster}}</td>
+                <td class="col-2">{{-- {{$cinema->poster}}--}}</td>
                 <td class="col-1">
                     <form action="{{route('cinema.edit', $cinema->id)}}" method="post">
                         @csrf
