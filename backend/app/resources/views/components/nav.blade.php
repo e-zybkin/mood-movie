@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{route('admin.index')}}" class="brand-link">
+{{--    <a href="{{route('admin.index')}}" class="brand-link">--}}
         <img src="/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
         <span class="brand-text font-weight-light">AdminLTE 3</span>
@@ -39,25 +39,25 @@
                         </a>
                     </div>
                     <div>
-                        <a href="./index.html" class="nav-link">
+                        <a href="{{route('film.index')}}" class="nav-link">
                             <i class="fas fa-film"></i>
                             <p>Films</p>
                         </a>
                     </div>
                     <div>
-                        <a href="./index.html" class="nav-link">
+{{--                        <a href="{{route('sliders.index')}}" class="nav-link">--}}
                             <i class="fas fa-image"></i>
                             <p>Sliders</p>
                         </a>
                     </div>
                     <div>
-                        <a href="./index.html" class="nav-link">
+{{--                        <a href="{{route('reviews.index')}}" class="nav-link">--}}
                             <i class="fas fa-comment"></i>
                             <p>Reviews</p>
                         </a>
                     </div>
                     <div>
-                        <a href="./index.html" class="nav-link">
+{{--                        <a href="{{route('feedback.index')}}" class="nav-link">--}}
                             <i class="fas fa-envelope-open"></i>
                             <p>Feedback</p>
                         </a>

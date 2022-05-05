@@ -23,17 +23,17 @@ class Cinema extends Model implements HasMedia
 
     public function films()
     {
-        $this->hasMany(Film::class, 'cinema_id', 'id');
+        return $this->hasMany(Film::class, 'cinema_id', 'id');
     }
 
     public function reviews()
     {
-        $this->hasMany(Review::class, 'cinema_id', 'id');
+        return $this->hasMany(Review::class, 'cinema_id', 'id');
     }
 
     public function sliders()
     {
-        $this->hasMany(Slider::class, 'cinema_id', 'id');
+        return $this->hasMany(Slider::class, 'cinema_id', 'id');
     }
 
     public function registerMediaConversions(Media $media = null): void

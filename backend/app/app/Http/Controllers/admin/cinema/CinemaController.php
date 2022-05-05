@@ -2,17 +2,26 @@
 
 namespace App\Http\Controllers\admin\cinema;
 
-use App\Http\Controllers\BaseController;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Cinema\StoreCinemaRequest;
 use App\Http\Requests\Cinema\UpdateCinemaRequest;
 use App\Http\Requests\CinemaPosterRequest;
 use App\Models\Cinema;
+use App\Services\CinemaService;
 
-class CinemaController extends BaseController
+class CinemaController extends Controller
 {
+
+    private CinemaService $cinemaService;
+
+    public function __construct(CinemaService $cinemaService)
+    {
+        $this->cinemaService = $cinemaService;
+    }
+
     public function index()
     {
-        $cinemas = $this->service->index();
+        $cinemas = $this->cinemaService->index();
 
         return view('admin.cinemas.cinema', ['cinemas' => $cinemas]);
     }
@@ -28,7 +37,7 @@ class CinemaController extends BaseController
 
         $poster = $reqPoster->validated();
 
-        $this->service->store($data, $poster['poster']);
+        $this->cinemaService->store($data, $poster['poster']);
 
         return redirect()->route('cinema.index');
     }
@@ -49,26 +58,26 @@ class CinemaController extends BaseController
 
         $poster = $reqPoster->validated();
 
-        $this->service->update($cinema, $data, $poster['poster']);
+        $this->cinemaService->update($cinema, $data, $poster['poster']);
 
         return redirect()->route('cinema.show', ['cinema' => $cinema]);
     }
 
     public function destroy($id)
     {
-        $this->service->destroy($id);
+        $this->cinemaService->destroy($id);
         return redirect()->route('cinema.index');
     }
 
     public function trash()
     {
-        $trash_cinemas = $this->service->trash();
+        $trash_cinemas = $this->cinemaService->trash();
         return view('admin.cinemas.cinema_trash', ['cinemas' => $trash_cinemas]);
     }
 
     public function restore($id)
     {
-        $this->service->restore($id);
+        $this->cinemaService->restore($id);
         return redirect()->route('cinema.index');
     }
 

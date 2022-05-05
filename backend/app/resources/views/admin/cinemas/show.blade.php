@@ -5,7 +5,7 @@
         name => {{$cinema->name}}<br>
         short_desc => {{$cinema->short_desc}}<br>
         full_desc => {{$cinema->full_desc}}<br>
-        poster => <img src="{{$cinema->getMedia('main')->first()->getFullUrl('thumb')}}" alt="Крыша небоскрёба">
+        poster => <img src="{{$cinema->getMedia('main')->first()->getFullUrl('thumb')}}" alt="Главное фото">
     </div>
     <div><a href="{{route('cinema.edit',$cinema->id)}}">Редактировать</a></div>
     <br>

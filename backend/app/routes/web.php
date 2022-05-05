@@ -37,3 +37,25 @@ Route::group(['prefix' => 'admin/cinema'], function () {
         ->name('cinema.delete');
 });
 
+Route::group(['prefix' => 'admin/films'], function () {
+    Route::get('/trash', [\App\Http\Controllers\admin\cinema\FilmController::class, 'trash'])
+        ->name('film.trash.index');
+    Route::get('/trash/{film}', [\App\Http\Controllers\admin\cinema\FilmController::class, 'restore'])
+        ->name('film.restore');
+
+    Route::get('/', [\App\Http\Controllers\admin\cinema\FilmController::class, 'index'])
+        ->name('film.index');
+    Route::get('/create', [\App\Http\Controllers\admin\cinema\FilmController::class, 'create'])
+        ->name('film.create');
+    Route::post('/', [\App\Http\Controllers\admin\cinema\FilmController::class, 'store'])
+        ->name('film.store');
+    Route::get('/{film}', [\App\Http\Controllers\admin\cinema\FilmController::class, 'show'])
+        ->name('film.show');
+    Route::get('/{film}/edit', [\App\Http\Controllers\admin\cinema\FilmController::class, 'edit'])
+        ->name('film.edit');
+    Route::patch('/update/{film}', [\App\Http\Controllers\admin\cinema\FilmController::class, 'update'])
+        ->name('film.update');
+    Route::delete('/{film}', [\App\Http\Controllers\admin\cinema\FilmController::class, 'destroy'])
+        ->name('film.delete');
+});
+
