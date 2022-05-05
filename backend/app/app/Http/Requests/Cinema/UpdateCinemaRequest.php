@@ -27,7 +27,7 @@ class UpdateCinemaRequest extends FormRequest
             'name'=>'required|string',
             'short_desc'=>'string',
             'full_desc'=>'string',
-            'poster'=>'image|mimes:jpg,jpeg,png',
+            //'poster'=>'image|mimes:jpg,jpeg,png',
         ];
     }
 }

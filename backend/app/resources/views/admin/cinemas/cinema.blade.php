@@ -21,8 +21,8 @@
                 <td class="col-1"><a href="{{route('cinema.show',$cinema->id)}}">{{$cinema->id}}</a></td>
                 <td class="col-2">{{$cinema->name}}</td>
                 <td class="col-3">{{$cinema->short_desc}}</td>
-                <td class="col-3">{{$cinema->full_desc}}</td>
-                <td class="col-2"><img src="{{$cinema->getMedia('main')->first()->getFullUrl('thumb')}}" alt="Пэнсил">
+                <td class="col-3">{{$cinema->getShortDescription()}}</td>
+                <td class="col-2"><img src="{{$cinema->getMedia('main')->first()->getFullUrl('thumb')}}" alt="Крыша небоскрёба">
                 </td>
                 <td class="col-1">
                     <form action="{{route('cinema.edit', $cinema->id)}}" method="post">

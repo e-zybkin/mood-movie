@@ -43,11 +43,13 @@ class CinemaController extends BaseController
         return view('admin.cinemas.edit', ['cinema' => $cinema]);
     }
 
-    public function update(UpdateCinemaRequest $request, Cinema $cinema)
+    public function update(UpdateCinemaRequest $request, CinemaPosterRequest $reqPoster, Cinema $cinema)
     {
         $data = $request->validated();
 
-        $this->service->update($cinema, $data);
+        $poster = $reqPoster->validated();
+
+        $this->service->update($cinema, $data, $poster['poster']);
 
         return redirect()->route('cinema.show', ['cinema' => $cinema]);
     }

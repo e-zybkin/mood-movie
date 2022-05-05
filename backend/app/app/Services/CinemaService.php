@@ -23,9 +23,14 @@ class CinemaService
         $cinema->save();
     }
 
-    public function update(Cinema $cinema, $data)
+    public function update(Cinema $cinema, $data, $poster)
     {
         $cinema->update($data);
+        if (!empty($poster)) {
+            $cinema->clearMediaCollection('main');
+            $cinema->addMedia($poster)->toMediaCollection('main');
+        }
+
     }
 
     public function destroy($id)
