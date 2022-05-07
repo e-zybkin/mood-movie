@@ -20,6 +20,10 @@ Route::group(['prefix' => 'admin/cinema'], function () {
         ->name('cinema.trash.index');
     Route::get('/trash/{cinema}', [\App\Http\Controllers\admin\cinema\CinemaController::class, 'restore'])
         ->name('cinema.restore');
+    Route::post('/cinema/sliders/{cinema}', [\App\Http\Controllers\admin\cinema\CinemaController::class, 'uploadSliderPhotos'])
+        ->name('cinema.sliders');
+    Route::get('/cinema/add_sliders/{cinema}', [\App\Http\Controllers\admin\cinema\CinemaController::class, 'createSliderPhotos'])
+        ->name('cinema.sliders.add');
 
     Route::get('/', [\App\Http\Controllers\admin\cinema\CinemaController::class, 'index'])
         ->name('cinema.index');

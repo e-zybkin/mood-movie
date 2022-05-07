@@ -23,14 +23,25 @@ class CinemaService
         $cinema->save();
     }
 
-    public function update(Cinema $cinema, $data, $poster)
+    public function upload($slider, $id)
+    {
+        $cinema = Cinema::find($id);
+        if (!empty($slider)) {
+            $cinema->addMedia($slider)->toMediaCollection('sliders');
+        }
+    }
+
+    public function update(Cinema $cinema, $data, $images)
     {
         $cinema->update($data);
-        if (!empty($poster)) {
+        if (!empty($images['poster'])) {
             $cinema->clearMediaCollection('main');
-            $cinema->addMedia($poster)->toMediaCollection('main');
+            $cinema->addMedia($images['poster'])->toMediaCollection('main');
         }
-
+        if (!empty($images['about'])) {
+            $cinema->clearMediaCollection('about');
+            $cinema->addMedia($images['about'])->toMediaCollection('about');
+        }
     }
 
     public function destroy($id)

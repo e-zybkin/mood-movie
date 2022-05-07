@@ -41,7 +41,7 @@ class Cinema extends Model implements HasMedia
         $this->addMediaConversion('thumb')
             ->width(200)
             ->height(200)
-            ->performOnCollections('main');
+            ->performOnCollections('main','about','sliders');
     }
 
     public function getShortDescription(): string

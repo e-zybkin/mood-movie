@@ -28,7 +28,12 @@
             @error('poster')
             <p class="text-danger">{{$message}}</p> @enderror
         </div>
+        <div class="form-group">
+            <label for="about" class="form-label">О кинотеатре</label>
+            <input class="form-control-file" name="about" type="file" id="about" value="{{$cinema->poster}}">
+            @error('poster')
+            <p class="text-danger">{{$message}}</p> @enderror
+        </div>
 
         <button type="submit" class="btn btn-primary">Обновить</button>
-    </form>
 @stop

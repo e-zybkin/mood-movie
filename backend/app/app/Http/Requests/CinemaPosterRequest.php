@@ -25,6 +25,7 @@ class CinemaPosterRequest extends FormRequest
     {
         return [
             'poster' => 'image|mimes:jpg,jpeg,png',
+            'about' => 'image|mimes:jpg,jpeg,png',
         ];
     }
 }

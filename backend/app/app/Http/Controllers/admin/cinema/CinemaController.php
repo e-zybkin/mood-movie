@@ -6,8 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Cinema\StoreCinemaRequest;
 use App\Http\Requests\Cinema\UpdateCinemaRequest;
 use App\Http\Requests\CinemaPosterRequest;
+use App\Http\Requests\CinemaSliderRequest;
 use App\Models\Cinema;
 use App\Services\CinemaService;
+use Illuminate\Http\Request;
+
+use function MongoDB\BSON\toJSON;
 
 class CinemaController extends Controller
 {
@@ -52,13 +56,30 @@ class CinemaController extends Controller
         return view('admin.cinemas.edit', ['cinema' => $cinema]);
     }
 
+    public function uploadSliderPhotos(Request $reqSlider,$id)
+    {
+        $slider = $reqSlider->file('sliders');
+
+        $this->cinemaService->upload($slider,$id);
+
+        return response()->json([
+            'success' => false,
+            'message' => 'Successfully uploaded file.',
+        ]);
+    }
+
+    public function createSliderPhotos($id)
+    {
+        return view('admin.cinemas.sliders', ['id' => $id]);
+    }
+
     public function update(UpdateCinemaRequest $request, CinemaPosterRequest $reqPoster, Cinema $cinema)
     {
         $data = $request->validated();
 
-        $poster = $reqPoster->validated();
+        $images = $reqPoster->validated();
 
-        $this->cinemaService->update($cinema, $data, $poster['poster']);
+        $this->cinemaService->update($cinema, $data, $images);
 
         return redirect()->route('cinema.show', ['cinema' => $cinema]);
     }

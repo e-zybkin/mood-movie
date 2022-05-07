@@ -48,6 +48,7 @@
     {{--        {{$cinemas->withQueryString()->links()}}--}}
     {{--    </div>--}}
     <div><a href="{{route('cinema.create')}}"><input class="btn btn-primary" type="button" value="Input"></a></div>
+
     <div><a href="{{route('cinema.trash.index')}}">
             <button style="float: right;" type="submit" class="btn btn-danger"><i
                     class="fa-solid fa-basket-shopping"></i></button>

@@ -10,6 +10,7 @@
         kinopoisk_link => {{$film->kinopoisk_link}}<br>
         poster => <img src="{{$film->getMedia('poster')->first()->getFullUrl('thumb')}}" alt="Главное фото">
     </div>
+
     <div><a href="{{route('film.edit',$film->id)}}">Редактировать</a></div>
     <br>
     <div><a href="{{route('film.index')}}">Вернуться назад</a></div>
