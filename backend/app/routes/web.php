@@ -63,3 +63,17 @@ Route::group(['prefix' => 'admin/films'], function () {
         ->name('film.delete');
 });
 
+Route::group(['prefix' => 'admin/reviews'], function () {
+    Route::get('/', [\App\Http\Controllers\admin\cinema\ReviewController::class, 'index'])
+        ->name('review.index');
+    Route::delete('/{review}', [\App\Http\Controllers\admin\cinema\ReviewController::class, 'destroy'])
+        ->name('review.delete');
+});
+
+Route::group(['prefix' => 'admin/feedback'], function () {
+    Route::get('/', [\App\Http\Controllers\admin\cinema\FeedbackController::class, 'index'])
+        ->name('feedback.index');
+    Route::delete('/{review}', [\App\Http\Controllers\admin\cinema\FeedbackController::class, 'destroy'])
+        ->name('feedback.delete');
+});
+

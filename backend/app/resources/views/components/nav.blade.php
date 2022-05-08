@@ -45,13 +45,13 @@
                         </a>
                     </div>
                     <div>
-                        <a href="{{route('cinema.index')}}" class="nav-link">
+                        <a href="{{route('review.index')}}" class="nav-link">
                             <i class="fas fa-comment"></i>
                             <p>Reviews</p>
                         </a>
                     </div>
                     <div>
-                        <a href="{{route('cinema.index')}}" class="nav-link">
+                        <a href="{{route('feedback.index')}}" class="nav-link">
                             <i class="fas fa-envelope-open"></i>
                             <p>Feedback</p>
                         </a>
