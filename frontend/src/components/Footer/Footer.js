@@ -1,14 +1,36 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="footer__menu">
         <h3 className="footer__title">MoodMovie</h3>
         <nav className="footer__nav">
-          <a className="footer__link" href="/#">Главная</a>
-          <a className="footer__link" href="/#">Кинотеатры</a>
-          <a className="footer__link" href="/#">Контакты</a>
+          <Link
+            className="footer__link"
+            to="intro"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >Главная</Link>
+          <Link
+            className="footer__link"
+            to="loc"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >Кинотеатры</Link>
+          <Link
+            className="footer__link"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >Контакты</Link>
         </nav>
         <p className="footer__copyright">&copy; {new Date().getFullYear()} ChelikiTeam</p>
       </div>

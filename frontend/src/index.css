@@ -13,6 +13,15 @@
 @import url(./blocks/present/__title/present__title.css);
 @import url(./blocks/present/__text/present__text.css);
 
+@import url(./blocks/places/places.css);
+@import url(./blocks/place/place.css);
+@import url(./blocks/place/__info/place__info.css);
+@import url(./blocks/place/__info-box/place__info-box.css);
+@import url(./blocks/place/__title/place__title.css);
+@import url(./blocks/place/__text/place__text.css);
+@import url(./blocks/place/__link/place__link.css);
+@import url(./blocks/place/__pic/place__pic.css);
+
 @import url(./blocks/bar/bar.css);
 @import url(./blocks/bar/__box/bar__box.css);
 @import url(./blocks/bar/__title/bar__title.css);

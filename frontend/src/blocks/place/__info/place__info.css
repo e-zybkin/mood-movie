@@ -1,0 +1,11 @@
+.place__info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 217px;
+  left: 54px;
+  max-width: 430px;
+  min-height: 553px;
+  background-color: #E59A54;
+  z-index: 2;
+}

@@ -1,7 +1,12 @@
 import React from "react";
+import { Link } from "react-scroll";
 import Footer from "../Footer/Footer";
 import Form from "../Form/Form";
+import Place from "../Place/Place";
 import popcorn from '../../images/popcorn.png';
+import tower from '../../images/tower.jpg'
+import camp from '../../images/camp.jpg'
+import parking from '../../images/parking.jpg'
 
 function Main(props) {
   /*создать функцию обработчик handleSubmit,
@@ -39,14 +44,35 @@ function Main(props) {
     <>
       <header className="main-header">
         <nav className="main-header__nav">
-          <a className="main-header__link" href="/#">Главная</a>
-          <a className="main-header__link" href="/#">Кинотеатры</a>
-          <a className="main-header__link" href="/#">Контакты</a>
+          <Link
+            className="main-header__link"
+            to="intro"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >Главная</Link>
+          <Link
+            className="main-header__link"
+            to="loc"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >Кинотеатры</Link>
+          <Link
+            className="main-header__link"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >Контакты</Link>
         </nav>
         <h1 className="main-header__title">MoodMovie</h1>
       </header>
       <main>
-        <section className="present">
+        <section className="present" id="intro">
           <div className="present__box">
             <h4 className="present__title">Сеть кинотеатров под открытым небом</h4>
             <p className="present__text">
@@ -58,8 +84,47 @@ function Main(props) {
           </div>
         </section>
 
-        <section className="places">
-
+        <section className="places" id="loc">
+          {/*{props.places.map((place, i) => (
+            <Place
+              link={place.link}
+              name={place.name}
+              place={place}
+              onCardClick={props.onCardClick}
+            />
+          ))}*/}
+          <Place
+            head="КРЫША НЕБОСКРЁБА"
+            text="В городе очень много развлечений
+            и мест отдыха, но крыши это еще не до конца использованные
+            площадки, мы переворачиваем ваше стандартное представление о кинотеатре.
+            Пледы, стулья, чай и кофе, люди, фото вид на город, кино, звёзды
+            - всё это создаёт романтическое настроение."
+            link="/romantic"
+            pic={tower}
+            picText="Крыша небоскрёба"
+          />
+          <Place
+            head="КЕМПИНГ В ЛЕСУ"
+            text="На базе всеми любимого кемпинга в лесу
+            появился наш новый кинотеатр под открытом небом.
+            Фильмы жанра ужасы, треск костра и шелест вековых деревьев,
+            дополняя друг друга, подарят Вам незабываемые
+            впечатления от просмотра кино. "
+            link="/horror"
+            pic={camp}
+            picText="Кемпинг в лесу"
+          />
+          <Place
+            head="КИНОПАРКИНГ"
+            text="В этот вечер — киносеанс и парковка
+            сольются для вас воедино.  Фильмы жанра ретро,
+            старинный антураж и ваша комфортабельная машина
+            позволят перенестись во времена молодости старших поколений."
+            link="/retro"
+            pic={parking}
+            picText="Кинопаркинг"
+          />
         </section>
 
         <section className="bar">
