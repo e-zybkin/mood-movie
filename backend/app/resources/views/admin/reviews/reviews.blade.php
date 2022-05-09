@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/css.css')}}" type="text/css">
 
     @php /** @var \App\Models\Film $film */ @endphp
-
+    <h1>Отзывы</h1>
     @foreach($reviews as $review)
         <div class="container">
             <p><span>nickname: {{$review->nickname}}</span></p>
@@ -17,6 +17,4 @@
         </div>
 
     @endforeach
-
-    <div><a href="{{route('review.create')}}"><input class="btn btn-primary" type="button" value="Input"></a></div>
 @stop

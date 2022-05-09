@@ -73,7 +73,14 @@ Route::group(['prefix' => 'admin/reviews'], function () {
 Route::group(['prefix' => 'admin/feedback'], function () {
     Route::get('/', [\App\Http\Controllers\admin\cinema\FeedbackController::class, 'index'])
         ->name('feedback.index');
+    Route::get('/create/to/{id}', [\App\Http\Controllers\admin\cinema\FeedbackController::class, 'create'])
+        ->name('feedback.create');
     Route::delete('/{review}', [\App\Http\Controllers\admin\cinema\FeedbackController::class, 'destroy'])
         ->name('feedback.delete');
+});
+
+Route::group(['prefix' => 'admin/email'], function () {
+    Route::post('/send/{id}', [\App\Http\Controllers\admin\MailController::class, 'sendMail'])
+        ->name('email.send');
 });
 
