@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Admin;
 
-use App\Http\Requests\Film\UpdateFilmRequest;
 use App\Models\Cinema;
 use App\Models\Film;
 use Illuminate\Http\UploadedFile;
@@ -36,7 +35,7 @@ class FilmService
     public function update(Film $film, $data, $poster)
     {
         $film->update($data);
-        $film->cinema()->sync();
+        //$film->cinema()->sync();
         if (!empty($poster)) {
             $film->clearMediaCollection('poster');
             $film->addMedia($poster)->toMediaCollection('poster');

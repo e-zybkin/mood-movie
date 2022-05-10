@@ -52,7 +52,7 @@
     {{--    <div class="mt-3">--}}
     {{--        {{$films->withQueryString()->links()}}--}}
     {{--    </div>--}}
-    <div><a href="{{route('film.create')}}"><input class="btn btn-primary" type="button" value="Input"></a></div>
+    <div><a href="{{route('film.create')}}"><input class="btn btn-primary" type="button" value="Создать"></a></div>
     <div><a href="{{route('film.trash.index')}}">
             <button style="float: right;" type="submit" class="btn btn-danger"><i
                     class="fa-solid fa-basket-shopping"></i></button>

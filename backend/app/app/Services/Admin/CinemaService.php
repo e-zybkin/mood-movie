@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Admin;
 
-use App\Http\Requests\Cinema\UpdateCinemaRequest;
 use App\Models\Cinema;
 use Illuminate\Http\UploadedFile;
 

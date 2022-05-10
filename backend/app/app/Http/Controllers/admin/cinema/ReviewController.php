@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\admin\cinema;
 
 use App\Http\Controllers\Controller;
-use App\Services\ReviewService;
-use Illuminate\Http\Request;
+use App\Services\Admin\ReviewService;
 
 class ReviewController extends Controller
 {

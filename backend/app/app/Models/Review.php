@@ -11,6 +11,8 @@ class Review extends Model
 
     protected $table = 'reviews';
 
+    protected $fillable = ['cinema_id','nickname','message'];
+
     public function cinema()
     {
         $this->belongsTo(Cinema::class,'cinema_id','id');

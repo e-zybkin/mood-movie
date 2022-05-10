@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\admin\cinema;
 
 use App\Http\Controllers\Controller;
-use App\Services\FeedbackService;
+use App\Services\Admin\FeedbackService;
 
 class FeedbackController extends Controller
 {

@@ -6,12 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Cinema\StoreCinemaRequest;
 use App\Http\Requests\Cinema\UpdateCinemaRequest;
 use App\Http\Requests\CinemaPosterRequest;
-use App\Http\Requests\CinemaSliderRequest;
 use App\Models\Cinema;
-use App\Services\CinemaService;
+use App\Services\Admin\CinemaService;
 use Illuminate\Http\Request;
-
-use function MongoDB\BSON\toJSON;
 
 class CinemaController extends Controller
 {

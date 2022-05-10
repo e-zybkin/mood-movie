@@ -41,13 +41,9 @@
                 </td>
             </tr>
         @endforeach
-
         </tbody>
     </table>
-    {{--    <div class="mt-3">--}}
-    {{--        {{$cinemas->withQueryString()->links()}}--}}
-    {{--    </div>--}}
-    <div><a href="{{route('cinema.create')}}"><input class="btn btn-primary" type="button" value="Input"></a></div>
+    <div><a href="{{route('cinema.create')}}"><input class="btn btn-primary" type="button" value="Создать"></a></div>
 
     <div><a href="{{route('cinema.trash.index')}}">
             <button style="float: right;" type="submit" class="btn btn-danger"><i

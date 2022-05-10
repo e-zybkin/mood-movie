@@ -122,6 +122,11 @@
       <path value="$PROJECT_DIR$/app/vendor/spatie/image-optimizer" />
       <path value="$PROJECT_DIR$/app/vendor/maennchen/zipstream-php" />
       <path value="$PROJECT_DIR$/app/vendor/league/glide" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/cache" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />

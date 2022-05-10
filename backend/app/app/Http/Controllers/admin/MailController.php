@@ -5,8 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MailRequest;
 use App\Mail\MailClass;
-use App\Services\MailService;
-use Illuminate\Mail\MailServiceProvider;
+use App\Services\Admin\MailService;
 use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller

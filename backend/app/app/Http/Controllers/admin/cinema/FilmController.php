@@ -4,11 +4,10 @@ namespace App\Http\Controllers\admin\cinema;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CinemaPosterRequest;
-use App\Http\Requests\Film\StoreFilmRequest;
+use App\Http\Requests\Film\StoreReviewRequest;
 use App\Http\Requests\Film\UpdateFilmRequest;
 use App\Models\Film;
-use App\Services\FilmService;
-use Illuminate\Http\Request;
+use App\Services\Admin\FilmService;
 
 class FilmController extends Controller
 {
@@ -32,7 +31,7 @@ class FilmController extends Controller
         return view('admin.films.create',['cinemas'=>$cinemas]);
     }
 
-    #[NoReturn] public function store(StoreFilmRequest $request, CinemaPosterRequest $reqPoster)
+    #[NoReturn] public function store(StoreReviewRequest $request, CinemaPosterRequest $reqPoster)
     {
         $data = $request->validated();
 

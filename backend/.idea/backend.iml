@@ -19,6 +19,11 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/spatie/image-optimizer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/maennchen/zipstream-php" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/glide" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/cache" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
