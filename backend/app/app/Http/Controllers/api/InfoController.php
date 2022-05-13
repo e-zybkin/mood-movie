@@ -11,7 +11,7 @@ use App\Http\Resources\Api\ReviewResource;
 use App\Services\Api\CinemaService;
 use Illuminate\Http\Request;
 
-class IndexCinemaController extends Controller
+class InfoController extends Controller
 {
     private CinemaService $cinemaService;
 

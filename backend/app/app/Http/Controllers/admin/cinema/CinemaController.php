@@ -60,7 +60,7 @@ class CinemaController extends Controller
         $this->cinemaService->upload($slider,$id);
 
         return response()->json([
-            'success' => false,
+            'success' => true,
             'message' => 'Successfully uploaded file.',
         ]);
     }
