@@ -137,7 +137,7 @@ function Main(props) {
               Ознакомиться с ассортиментом вы можете уже сейчас, а перед началом сеанса
               не забудьте зайти и взять с собой незаменимый атрибут - свежий хрустящий попкорн.
             </p>
-            <button type="button" onClick={props} className="bar__button">Выбрать снеки</button>
+            <button type="button" onClick={props.onBarClick} className="bar__button">Выбрать снеки</button>
           </div>
           <img
             className="bar__pic"
