@@ -2,7 +2,7 @@
   display: flex;
   position: fixed;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   top: 0;
   left: 0;
   bottom: 0;
@@ -10,4 +10,6 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s, opacity 0.2s linear;
+  overflow: auto;
+  padding-top: 15vh;
 }

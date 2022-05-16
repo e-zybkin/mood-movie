@@ -10,7 +10,11 @@ const Popup = ({ isOpen, name, onClose, children }) => {
     }
 
     document.addEventListener('keydown', closeByEscape)
-    return () => document.removeEventListener('keydown', closeByEscape)
+    document.body.classList.add('no-scroll');
+    return () => {
+      document.removeEventListener('keydown', closeByEscape)
+      document.body.classList.remove('no-scroll');
+    }
   }, [isOpen, onClose])
 
   const handleOverlay = (e) => {
@@ -19,6 +23,7 @@ const Popup = ({ isOpen, name, onClose, children }) => {
     }
   }
 
+  //предположительно в type others может не быть надобности, по исходу проекта нужно будет это проверить
   return (
     <div
       className={`popup popup_type_others ${isOpen ? "popup_opened" : ""} popup_type_${name}`}

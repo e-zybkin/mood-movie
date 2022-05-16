@@ -1,0 +1,8 @@
+.popup__bar-box {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #E59A54;
+  border-bottom: 1px solid #E59A54;
+  margin: 38px;
+  
+}

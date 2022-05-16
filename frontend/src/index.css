@@ -55,3 +55,17 @@
 @import url(./blocks/popup/_opened/popup_opened.css);
 @import url(./blocks/popup/__content/popup__content.css);
 @import url(./blocks/popup/__close-btn/popup__close-btn.css);
+@import url(./blocks/popup/__text/popup__text.css);
+@import url(./blocks/popup/__age-text/popup__age-text.css);
+@import url(./blocks/popup/__age-buttons/popup__age-buttons.css);
+@import url(./blocks/popup/__button/popup__button.css);
+@import url(./blocks/popup/__bar-block/popup__bar-block.css);
+@import url(./blocks/popup/__bar-box/popup__bar-box.css);
+@import url(./blocks/popup/__bar-title/popup__bar-title.css);
+@import url(./blocks/popup/__bar-text/popup__bar-text.css);
+@import url(./blocks/popup/__bar-header/popup__bar-header.css);
+@import url(./blocks/foodcard/foodcard.css);
+@import url(./blocks/foodcard/__price/foodcard__price.css);
+@import url(./blocks/foodcard/__text/foodcard__text.css);
+@import url(./blocks/foodcard/__pic-box/foodcard__pic-box.css);
+@import url(./blocks/no-scroll/no-scroll.css);
