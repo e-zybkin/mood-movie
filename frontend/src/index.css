@@ -69,3 +69,33 @@
 @import url(./blocks/foodcard/__text/foodcard__text.css);
 @import url(./blocks/foodcard/__pic-box/foodcard__pic-box.css);
 @import url(./blocks/no-scroll/no-scroll.css);
+
+@import url(./blocks/about/about.css);
+@import url(./blocks/about/__info/about__info.css);
+@import url(./blocks/about/__pic-box/about__pic-box.css);
+@import url(./blocks/about/__pic/about__pic.css);
+@import url(./blocks/about/__text/about__text.css);
+@import url(./blocks/about/__title/about__title.css);
+
+@import url(./blocks/cinema-header/cinema-header.css);
+@import url(./blocks/cinema-header/__link/cinema-header__link.css);
+
+@import url(./blocks/billboard/billboard.css);
+@import url(./blocks/billboard/__title/billboard__title.css);
+@import url(./blocks/billboard/__posters/billboard__posters.css);
+
+@import url(./blocks/poster/poster.css);
+@import url(./blocks/poster/__pic/poster__pic.css);
+@import url(./blocks/poster/__text/poster__text.css);
+@import url(./blocks/poster/__title/poster__title.css);
+
+@import url(./blocks/reviews/reviews.css);
+
+@import url(./blocks/review-form/review-form.css);
+@import url(./blocks/review-form/__title/review-form__title.css);
+@import url(./blocks/form/_type/form_type_review.css);
+@import url(./blocks/review-form/__inputs/review-form__inputs.css);
+
+@import url(./blocks/loc-slider/loc-slider.css);
+@import url(./blocks/loc-slider/__title/loc-slider__title.css);
+@import url(./blocks/loc-slider/__slider/loc-slider__slider.css);

@@ -1,0 +1,9 @@
+.about {
+  display: flex;
+  max-width: 1291px;
+  min-height: 530px;
+  border-top: 1px solid #E59A54;
+  border-bottom: 1px solid #E59A54;
+  justify-content: center;
+  align-items: center;
+}

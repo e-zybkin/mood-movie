@@ -1,0 +1,11 @@
+.billboard__posters{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 756px;
+  background-color: #E59A54;
+  background-image: url(../../../images/tape.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}

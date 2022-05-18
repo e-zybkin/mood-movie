@@ -1,0 +1,13 @@
+.review-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1366px;
+  min-height: 827px;
+  background-color: #E59A54;
+  background-image: url(../../images/tape.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  color: #091423;
+}

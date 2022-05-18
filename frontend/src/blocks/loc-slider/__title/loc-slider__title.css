@@ -1,0 +1,11 @@
+.loc-slider__title{
+  width: 100%;
+  min-height: 100px;
+  margin-top: 59px;
+  background-color: #E59A54;
+  color: #091423;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 100px;
+  text-align: center;
+}
