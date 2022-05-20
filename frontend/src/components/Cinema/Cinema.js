@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import about from "../../images/about-test.jpg";
 import Poster from "../Poster/Poster";
 import Form from "../Form/Form";
+import Carousel from "../Carousel/Carousel";
+import ReviewCard from "../ReviewCard/ReviewCard";
 import lala from "../../images/lalaposter.jpg";
+import slideOne from "../../images/slide1.jpg";
+import slideTwo from "../../images/slide2.jpg";
+import slideThree from "../../images/slide3.jpg"
 
 //добрая часть информации будет приходить через контекст,
 //так что часть пропсов нужно будет упразднить
@@ -24,7 +29,28 @@ function Cinema(props) {
         <section className="loc-slider">
           <h3 className="loc-slider__title">Крыша небоскреба</h3>
           <div className="loc-slider__slider">
-            
+            <Carousel
+              arrows={false}
+              pageWidth={823}
+            >
+              {/*Здесь должен быть map, который
+              будет пробегаться по полученному массиву фоток*/}
+              <img
+                className="loc-slider__item"
+                src={slideOne}
+                alt=""
+              />
+              <img
+                className="loc-slider__item"
+                src={slideTwo}
+                alt=""
+              />
+              <img
+                className="loc-slider__item"
+                src={slideThree}
+                alt=""
+              />
+            </Carousel>
           </div>
         </section>
 
@@ -93,7 +119,42 @@ function Cinema(props) {
         </section>
 
         <section className="reviews">
-
+          <h3 className="reviews__title">ОТЗЫВЫ</h3>
+          <Carousel
+            arrows={true}
+            pageWidth={380}
+          >
+            <ReviewCard
+              owner="Алина"
+              date="27 января 2022"
+              text="Повседневная практика показывает,
+              что постоянный количественный рост и
+              сфера нашей активности представляет
+              собой интересный эксперимент проверки
+              соответствующий условий активизации."
+            />
+            <ReviewCard
+              owner="Максим"
+              date="23 февраля 2022"
+              text="Равным образом сложившаяся структура
+              организации способствует подготовки и
+              реализации систем массового участия.
+              Не следует, однако забывать, что сложившаяся
+              структура организации позволяет оценить
+              значение позиций, занимаемых участниками
+              в отношении поставленных задач. "
+            />
+            <ReviewCard
+              owner="Николай"
+              date="5 марта 2022"
+              text="Не следует, однако забывать,
+              что реализация намеченных плановых заданий
+              играет важную роль в формировании направлений
+              прогрессивного развития. Равным образом новая
+              модель организационной деятельности требуют от
+              нас анализа новых предложений."
+            />
+          </Carousel>
         </section>
 
         <section className="review-form">
@@ -139,4 +200,4 @@ function Cinema(props) {
   )
 }
 
-export default Cinema
+export default Cinema;

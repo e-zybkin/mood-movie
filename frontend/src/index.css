@@ -99,3 +99,13 @@
 @import url(./blocks/loc-slider/loc-slider.css);
 @import url(./blocks/loc-slider/__title/loc-slider__title.css);
 @import url(./blocks/loc-slider/__slider/loc-slider__slider.css);
+@import url(./blocks/carousel/carousel.css);
+@import url(./blocks/carousel/__window/carousel__window.css);
+@import url(./blocks/carousel/__all-items/carousel__all-items.css);
+@import url(./blocks/arrow/arrow.css);
+@import url(./blocks/carousel/__reviews/carousel__reviews.css);
+@import url(./blocks/reviews/__title/reviews__title.css);
+@import url(./blocks/review/review.css);
+@import url(./blocks/review/__date/review__date.css);
+@import url(./blocks/review/__owner/review__owner.css);
+@import url(./blocks/review/__text/review__text.css);

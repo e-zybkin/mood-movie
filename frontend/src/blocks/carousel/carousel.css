@@ -1,0 +1,6 @@
+.carousel {
+  max-width: 100%;
+  min-height: 551px;
+  display: flex;
+  align-items: center;
+}
