@@ -23,17 +23,13 @@ class CinemaService
         Feedback::create($feedback);
     }
 
-    public function storeReview($review)
-    {
-        Review::create($review);
-    }
-
     public function getSliders($id)
     {
         $data = [];
         $cinema = Cinema::find($id);
         foreach ($cinema->getMedia('sliders') as $key => $image) {
-            $data[] = $cinema->getMedia('sliders')->all()[$key]->getFullUrl('thumb');
+            $data['thumb'][]= $cinema->getMedia('sliders')->all()[$key]->getFullUrl('thumb');
+            $data['original'][] = $cinema->getMedia('sliders')->all()[$key]->getFullUrl();
         }
         return $data;
     }
@@ -41,7 +37,8 @@ class CinemaService
     public function getAbout($id)
     {
         $cinema = Cinema::find($id);
-        $about = $cinema->getMedia('about')->first()->getFullUrl('thumb');
+        $about['thumb'] = $cinema->getMedia('about')->first()->getFullUrl('thumb');
+        $about['original'] = $cinema->getMedia('about')->first()->getFullUrl();
         return $about;
     }
 
