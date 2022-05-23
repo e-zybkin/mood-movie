@@ -1,4 +1,6 @@
 .reviews{
   width: 100%;
   min-height: 757px;
+  display: flex;
+  flex-direction: column;
 }

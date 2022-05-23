@@ -109,3 +109,13 @@
 @import url(./blocks/review/__date/review__date.css);
 @import url(./blocks/review/__owner/review__owner.css);
 @import url(./blocks/review/__text/review__text.css);
+@import url(./blocks/carousel/__window/_type/carousel__window_type_review.css);
+
+@import url(./blocks/popup/__film-box/popup__film-box.css);
+@import url(./blocks/popup/__film-header/popup__film-header.css);
+@import url(./blocks/popup/__film-title/popup__film-title.css);
+@import url(./blocks/popup/__film-age/popup__film-age.css);
+@import url(./blocks/popup/__film-info/popup__film-info.css);
+@import url(./blocks/popup/__film-about/popup__film-about.css);
+@import url(./blocks/popup/__film-trailer/popup__film-trailer.css);
+@import url(./blocks/popup/__film-link/popup__film-link.css);

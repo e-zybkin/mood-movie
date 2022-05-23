@@ -44,7 +44,7 @@ function Carousel(props) {
   if(props.arrows) {
     return(
       <div className="carousel carousel__reviews">
-        <div className="carousel__window">
+        <div className="carousel__window carousel__window_type_review">
           <div
             className="carousel__all-items"
             style={{

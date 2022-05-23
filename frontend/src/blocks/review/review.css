@@ -1,6 +1,15 @@
 .review{
+  /*max-width: 380px;*/
+  /*min-height: 332px;*/
+  min-width: 380px;
   max-width: 380px;
-  min-height: 332px;
+  height: 100%;
+  /*костыль, вышеобозначенные значения должен задавать
+    useEffect в компоненте Carousel, что он успешно
+    делает для первого слайдер, но почему то игнорит второй
+    возможно из за того что в качестве children выступают
+    компоненты ReviewCard
+  */
   margin-right: 20px;
   font-size: 16px;
   font-weight: 400;

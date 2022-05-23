@@ -4,7 +4,7 @@ function Poster(props) {
   return(
     <article className="poster">
       <img
-        className="poster__pic"
+        className="poster__pic buttons"
         src={props.pic}
         alt={props.alt}
       />
