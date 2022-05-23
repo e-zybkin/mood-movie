@@ -41,26 +41,6 @@ class InfoController extends Controller
     }
 
 
-    public function storeFeedback(StoreFeedbackRequest $request)
-    {
-        $feedback = $request->all();
-        $this->cinemaService->storeFeedback($feedback);
-        return response()->json([
-            'success' => true,
-            'message' => 'feedback success send',
-        ], 200);
-    }
-
-    public function storeReview(StoreReviewRequest $request)
-    {
-        $review = $request->all();
-        $this->cinemaService->storeReview($review);
-        return response()->json([
-            'success' => true,
-            'message' => 'review created',
-        ], 200);
-    }
-
     public function getSliders($id)
     {
         $sliders = $this->cinemaService->getSliders($id);
