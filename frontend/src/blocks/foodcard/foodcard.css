@@ -1,0 +1,15 @@
+.foodcard {
+  display: grid;
+  grid-template-rows: 225px 48px 36px;
+  grid-template-columns: 310px;
+  row-gap: 15px;
+  max-width: 310px;
+  min-height: 367px;
+  background-color: #E59A54;
+  color: black;
+  margin: 0 20px 0 0;
+}
+
+.foodcard:nth-of-type(3n) {
+  margin: 0;
+}

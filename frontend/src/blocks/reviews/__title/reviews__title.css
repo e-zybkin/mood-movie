@@ -1,0 +1,10 @@
+.reviews__title{
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 72px;
+  text-align: left;
+  color: #E59A54;
+  margin: 113px 0 74px 58px;
+  max-width: 220px;
+  min-height: 64px;
+}

@@ -1,0 +1,15 @@
+.bar__button {
+  width: 180px;
+  height: 54px;
+  background-color: #091423;
+  color: #E59A54;
+  margin: 0;
+  transition: opacity 0.25s linear;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.bar__button:hover {
+  opacity: 0.7;
+}

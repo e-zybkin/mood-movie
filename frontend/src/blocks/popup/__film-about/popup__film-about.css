@@ -1,0 +1,10 @@
+.popup__film-about{
+  max-width: 380px;
+  margin: 0;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  align-self: center;
+}

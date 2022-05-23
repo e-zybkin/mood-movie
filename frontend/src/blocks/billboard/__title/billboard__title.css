@@ -1,0 +1,12 @@
+.billboard__title {
+  max-width: 373px;
+  min-height: 102px;
+  background-color: #E59A54;
+  color: #091423;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 100px;
+  text-align: center;
+  margin-top: 130px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,7 @@
+.carousel__reviews{
+  flex-direction: column;
+  max-width: 1080px; /*380px костыль*/
+  min-width: 1080px;
+  align-self: center;
+  overflow: hidden;
+}

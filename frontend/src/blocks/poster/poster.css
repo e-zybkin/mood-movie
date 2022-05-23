@@ -1,0 +1,8 @@
+.poster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 384px;
+  min-height: 499px;
+  color: #000000;
+}

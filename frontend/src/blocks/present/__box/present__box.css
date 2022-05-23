@@ -1,0 +1,9 @@
+.present__box {
+  margin: 29px auto 49px auto;
+  max-width: 1182px;
+  min-height:574px;
+  background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../../images/titlePic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

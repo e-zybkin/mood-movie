@@ -1,0 +1,6 @@
+.place {
+  position: relative;
+  min-height: 900px;
+  border-top: 1px solid #E59A54;
+  display: flex;
+}

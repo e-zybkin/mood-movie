@@ -1,0 +1,9 @@
+.loc-slider{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 776px;
+  border-top: 1px solid #E59A54;
+}

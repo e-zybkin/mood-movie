@@ -1,0 +1,9 @@
+.review-form__title{
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 72px;
+  text-align: center;
+  max-width: 688px;
+  min-height: 137px;
+  margin: 0 0 40px 0;
+}

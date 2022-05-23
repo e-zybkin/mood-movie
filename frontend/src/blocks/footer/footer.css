@@ -1,0 +1,10 @@
+.footer {
+  min-height: 480px;
+  border-top: 1px solid #E59A54;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 130px;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+}
