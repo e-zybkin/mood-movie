@@ -3,6 +3,13 @@
 Данная проектная работа представляет из себя веб-приложение, презентующее сеть кинотеатров Mood-Movie.  
 Основаная идея нашей сети - у каждой локации своё настроение, а значит свои фильмы.
 
+### Installation
+1. Download the handy IDE
+2. Download docker (better in Linux-system on a WSL2)
+3. docker-compose build
+4. docker-compose up -d
+5. docker-compose run --rm php-cli composer install
+
 ### В веб-приложении пользователь может:  
 * ознакомиться со всеми доступными локациями сети кинотеатров
 * ознакомиться с фильмами, что на них показывают
